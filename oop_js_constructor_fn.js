@@ -38,3 +38,17 @@ console.dir(hondica)
 
 // console.log(hondica.age())
 // console.dir(hondica)
+
+console.log(hondica.__proto__ === Car.prototype)
+// * => true
+// * Car.prototype => prototype of every instance of Car constructor function
+// * hondica.__proto__ => prototype property of constructor function
+
+console.log(Car.prototype.isPrototypeOf(hondica)) 
+// * => true
+
+console.log(hondica.hasOwnProperty('make'))
+// * => true; since it has it as property 
+
+console.log(hondica.hasOwnProperty('age'))
+// * => false, since it only has access to it
